@@ -41,7 +41,15 @@ public class UserController {
         return userRepository.findById(id)
                 .map(user -> {
                     user.setName(userDetails.getName());
+                    user.setSurname(userDetails.getSurname());
                     user.setEmail(userDetails.getEmail());
+                    user.setPassword(userDetails.getPassword());
+                    user.setBirthday(userDetails.getBirthday());
+                    user.setPhoneNumber(userDetails.getPhoneNumber());
+                    user.setAddress(userDetails.getAddress());
+                    user.setCity(userDetails.getCity());
+                    user.setZipCode(userDetails.getZipCode());
+                    user.setUserType(userDetails.getUserType());
                     User updatedUser = userRepository.save(user);
                     return ResponseEntity.ok().body(updatedUser);
                 }).orElse(ResponseEntity.notFound().build());
@@ -56,8 +64,4 @@ public class UserController {
                     return ResponseEntity.ok().build();
                 }).orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-
-
-
 }
