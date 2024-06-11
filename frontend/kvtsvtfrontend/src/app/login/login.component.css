@@ -21,6 +21,15 @@
     padding: 8px;
     box-sizing: border-box;
   }
+
+  .register-text {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 7px;
+    color: lightblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
   
   button {
     width: 100%;
