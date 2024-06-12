@@ -1,0 +1,14 @@
+    {
+        "id": 11,
+        "name": "Nemanja",
+        "surname": "Nemanja",
+        "email": "nemanja123@gmail.com",
+        "password": "1234",
+        "createdAt": "2024-06-12",
+        "birthday": "2023-10-04",
+        "phoneNumber": "123123",
+        "address": "dada",
+        "city": "dada",
+        "zipCode": "12345",
+        "userType": "ADMIN"
+    }

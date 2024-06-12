@@ -1,0 +1,17 @@
+{
+    "name": "SportClub",
+    "city": "Kragujevac",
+    "address": "Cara Lazara 10",
+    "description": "Moderno opremljena teretana sa velikim izborom grupnih treninga.",
+    "disciplines": ["Crossfit", "Yoga", "Pilates"],
+    "ratings": [5, 4, 5],
+    "workingTimes": [
+        {"dayOfWeek": "Ponedeljak", "openingTime": "06:00", "closingTime": "21:00"},
+        {"dayOfWeek": "Utorak", "openingTime": "06:00", "closingTime": "21:00"},
+        {"dayOfWeek": "Sreda", "openingTime": "06:00", "closingTime": "21:00"},
+        {"dayOfWeek": "Cetvrtak", "openingTime": "06:00", "closingTime": "21:00"},
+        {"dayOfWeek": "Petak", "openingTime": "06:00", "closingTime": "21:00"},
+        {"dayOfWeek": "Subota", "openingTime": "08:00", "closingTime": "20:00"},
+        {"dayOfWeek": "Nedelja", "openingTime": "08:00", "closingTime": "20:00"}
+    ]
+}

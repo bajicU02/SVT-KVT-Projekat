@@ -1,0 +1,54 @@
+/* Container for the gym list */
+.gym-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for the list of gyms */
+  .gym-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style for each gym item */
+  .gym-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style for the gym link */
+  .gym-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  /* Hover effect for the gym link */
+  .gym-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style for the average rating */
+  .gym-item .rating {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  /* No gyms available message */
+  .no-gyms {
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+    padding: 20px;
+  }
+  

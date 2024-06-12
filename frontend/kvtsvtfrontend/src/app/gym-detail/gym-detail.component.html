@@ -1,0 +1,26 @@
+<div class="gym-detail-container" *ngIf="gym">
+    <h2>{{ gym.name }}</h2>
+    <p><strong>Grad:</strong> {{ gym.city }}</p>
+    <p><strong>Adresa:</strong> {{ gym.address }}</p>
+    <p><strong>Opis:</strong> {{ gym.description }}</p>
+    <p class="disciplines"><strong>Discipline:</strong> {{ gym.disciplines.join(', ') }}</p>
+    <div class="working-times" *ngIf="gym.workingTimes && gym.workingTimes.length > 0">
+      <h3>Radno Vreme</h3>
+      <ul>
+        <li *ngFor="let time of gym.workingTimes">
+          {{ time.dayOfWeek }}: {{ time.openingTime }} - {{ time.closingTime }}
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Add Rating Button -->
+    <div *ngIf="userType === 'BASIC_USER'">
+      <button (click)="addRating()">Add Rating</button>
+    </div>
+  
+    <!-- Delete Gym Button -->
+    <div *ngIf="userType === 'ADMIN'">
+      <button (click)="deleteGym()">Delete Gym</button>
+    </div>
+  </div>
+  

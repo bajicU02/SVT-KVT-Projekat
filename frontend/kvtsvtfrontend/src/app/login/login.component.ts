@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onSubmit() {
     console.log('Form submitted with email:', this.email, 'and password:', this.password); // Log form submission
@@ -31,7 +33,7 @@ export class LoginComponent {
       if (response) {
         console.log('Login successful', response);
         alert('Logged in');
-        // Redirect to another page or perform some action
+        this.router.navigate(['/gyms']); // Navigate to the gym list page
       }
     });
   }

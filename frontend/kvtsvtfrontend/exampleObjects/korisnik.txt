@@ -1,0 +1,14 @@
+    {
+        "id": 9,
+        "name": "Dragan",
+        "surname": "Draganovic",
+        "email": "dragan123@gmail.com",
+        "password": "dragan555",
+        "createdAt": "2024-06-11",
+        "birthday": "1996-04-06",
+        "phoneNumber": "+3818912611100",
+        "address": "Beogradski Trg 145",
+        "city": "Beograd",
+        "zipCode": "25000",
+        "userType": "BASIC_USER"
+    }

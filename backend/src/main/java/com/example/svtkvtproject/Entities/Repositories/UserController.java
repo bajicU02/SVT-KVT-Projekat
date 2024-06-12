@@ -92,6 +92,7 @@ public class UserController {
                 logger.info("Login successful for user: " + user.getEmail());
                 Map<String, String> response = new HashMap<>();
                 response.put("message", "Login successful");
+                response.put("userType", user.getUserType().toString()); // Ensure userType is included in the response
                 return ResponseEntity.ok(response);
             } else {
                 logger.warn("Invalid password for user: " + user.getEmail());

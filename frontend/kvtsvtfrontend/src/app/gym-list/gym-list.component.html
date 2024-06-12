@@ -1,0 +1,11 @@
+<div class="gym-list-container" *ngIf="gyms.length > 0">
+  <ul class="gym-list">
+    <li class="gym-item" *ngFor="let gym of gyms">
+      <a [routerLink]="['/gyms', gym.id]">{{ gym.name }}</a>
+      <span class="rating">Rating: {{ getAverageRating(gym.ratings) | number:'1.1-1' }}</span>
+    </li>
+  </ul>
+</div>
+<div class="gym-list-container" *ngIf="gyms.length === 0">
+  <p class="no-gyms">No gyms available.</p>
+</div>
