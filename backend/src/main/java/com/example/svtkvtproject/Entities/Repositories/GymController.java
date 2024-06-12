@@ -31,11 +31,11 @@ public class GymController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Create a new gym
+   /* // Create a new gym
     @PostMapping
     public Gym createGym(@RequestBody Gym gym) {
         return gymRepository.save(gym);
-    }
+    } */
 
     // Update an existing gym
     @PutMapping("/{id}")
@@ -73,5 +73,12 @@ public class GymController {
                     Gym updatedGym = gymRepository.save(gym);
                     return ResponseEntity.ok().body(updatedGym);
                 }).orElse(ResponseEntity.notFound().build());
+    }
+    
+    // Add a new gym
+    @PostMapping
+    public ResponseEntity<Gym> addGym(@RequestBody Gym gym) {
+        Gym savedGym = gymRepository.save(gym);
+        return ResponseEntity.ok(savedGym);
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GymService } from '../gym.service';
 import { Gym } from '../models/gym.model';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router'; // Import Router
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,10 +13,15 @@ import { CommonModule } from '@angular/common';
 })
 export class GymListComponent implements OnInit {
   gyms: Gym[] = [];
+  isAdmin: boolean = false; // Add this property
 
-  constructor(private gymService: GymService) {}
+  constructor(private gymService: GymService, private router: Router) {} // Inject Router
 
   ngOnInit() {
+    const userType = localStorage.getItem('userType');
+    console.log('User type:', userType); // Log user type
+    this.isAdmin = userType === 'ADMIN'; // Check if the user is an admin
+
     this.gymService.getGyms().subscribe({
       next: (gyms) => {
         this.gyms = gyms;
@@ -28,6 +33,9 @@ export class GymListComponent implements OnInit {
     });
   }
 
+  navigateToAddGym() {
+    this.router.navigate(['/add-gym']);
+  }
 
   getAverageRating(ratings: number[]): number {
     if (!ratings || ratings.length === 0) {
